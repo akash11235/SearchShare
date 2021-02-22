@@ -1,3 +1,5 @@
+package io.github.akash11235.searchshare;
+
 import com.hierynomus.smbj.SMBClient;
 import com.hierynomus.smbj.auth.AuthenticationContext;
 import com.hierynomus.smbj.connection.Connection;

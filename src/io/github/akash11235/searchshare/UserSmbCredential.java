@@ -1,3 +1,5 @@
+package io.github.akash11235.searchshare;
+
 public class UserSmbCredential {
 
 	private String userId;

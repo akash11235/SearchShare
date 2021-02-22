@@ -1,3 +1,5 @@
+package io.github.akash11235.searchshare;
+
 public class OSValidator {
 
     private static String OS = System.getProperty("os.name").toLowerCase();

@@ -1,16 +1,9 @@
-import java.io.File;
+package io.github.akash11235.searchshare;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.logging.Logger;
-
-import com.hierynomus.msfscc.fileinformation.FileIdBothDirectoryInformation;
-import com.hierynomus.smbj.SMBClient;
-import com.hierynomus.smbj.auth.AuthenticationContext;
-import com.hierynomus.smbj.connection.Connection;
-import com.hierynomus.smbj.session.Session;
-import com.hierynomus.smbj.share.DiskShare;
 
 public class PatchSearcher {
 //first write a prototype which can list the files from a shared folder 
@@ -94,9 +87,9 @@ public class PatchSearcher {
 			shared_path = ps.prop.getProperty("shared_path");
 		}
 
-		ps.uc = new UserSmbCredential(ps.prop.getProperty("domain"),
-				                      ps.prop.getProperty("userId"),
-				                      ps.prop.getProperty("password"));
+		ps.uc = new UserSmbCredential(domain,
+				                      userId,
+				                      password);
 
 		String ip = shared_path.substring(2, shared_path.indexOf("\\",2));
 		int share_sidx = shared_path.indexOf("\\",2)+1;
